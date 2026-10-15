@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Deuda Consorcio Malvinas 850 · 2025-2026</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px 20px 48px; background: #f1f5f9;
+         font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif; color: #0f172a; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  h1 { font-size: 25px; margin: 0 0 4px; letter-spacing: -.3px; }
+  .sub { color: #64748b; font-size: 14px; margin-bottom: 22px; }
+  .kpis { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+  .kpi { flex: 1 1 180px; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+         padding: 12px 14px; box-shadow: 0 1px 2px rgba(15,23,42,.05); }
+  .kpi-l { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: #64748b; }
+  .kpi-v { font-size: 19px; font-weight: 700; margin-top: 5px; }
+  .kpi-s { font-size: 11.5px; color: #94a3b8; margin-top: 3px; }
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px 16px 10px;
+          margin-bottom: 20px; box-shadow: 0 1px 3px rgba(15,23,42,.06); }
+  .card h2 { font-size: 16px; margin: 0 0 2px; }
+  .card p.hint { font-size: 12.5px; color: #64748b; margin: 0 0 8px; }
+  svg { width: 100%; height: auto; display: block; }
+  .tick { font-size: 11.5px; fill: #64748b; }
+  .xlab { font-size: 12px; fill: #475569; font-weight: 600; }
+  .vlab { font-size: 11.5px; font-weight: 700; }
+  .vlab2 { font-size: 11px; font-weight: 600; }
+  .legend { display: flex; gap: 18px; font-size: 12.5px; color: #475569; padding: 4px 8px 10px; }
+  .dot { display: inline-block; width: 11px; height: 11px; border-radius: 3px;
+         margin-right: 6px; vertical-align: -1px; }
+  footer { font-size: 12px; color: #94a3b8; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Crecimiento de la deuda &mdash; Consorcio Malvinas 850</h1>
+  <div class="sub">Saldo consolidado de expensas comunes · octubre 2025 &ndash; septiembre 2026 (12 liquidaciones)</div>
+
+  <div class="kpis"><div class="kpi"><div class="kpi-l">Saldo antes del período</div><div class="kpi-v" style="color:#15803d">191.529,60</div><div class="kpi-s">19-oct-2025 · a favor</div></div><div class="kpi"><div class="kpi-l">Deuda al cierre</div><div class="kpi-v" style="color:#b91c1c">2.441.666,11</div><div class="kpi-s">30-sep-2026 · a cargo</div></div><div class="kpi"><div class="kpi-l">Variación neta 12 meses</div><div class="kpi-v" style="color:#b91c1c">-2.633.195,71</div><div class="kpi-s">deterioro acumulado</div></div><div class="kpi"><div class="kpi-l">Peor mes</div><div class="kpi-v" style="color:#b91c1c">Ago-26 (-2,81M)</div><div class="kpi-s">saldo mínimo del período</div></div><div class="kpi"><div class="kpi-l">Promedio mensual</div><div class="kpi-v" style="color:#b91c1c">-239.381,43</div><div class="kpi-s">de deterioro por mes</div></div></div>
+
+  <div class="card">
+    <h2>Evoluci&oacute;n del saldo consolidado</h2>
+    <p class="hint">Por encima de la l&iacute;nea cero = saldo a favor del consorcio. Por debajo = deuda.</p>
+    <svg viewBox="0 0 1000 520" role="img" aria-label="Evolucion de la deuda">
+      <defs>
+        <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f87171" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#f87171" stop-opacity="0.05"/>
+        </linearGradient>
+        <linearGradient id="green" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#4ade80" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#4ade80" stop-opacity="0.05"/>
+        </linearGradient>
+        <clipPath id="above"><rect x="0" y="0" width="1000" height="100.0"/></clipPath>
+        <clipPath id="below"><rect x="0" y="100.0" width="1000" height="520"/></clipPath>
+      </defs>
+      <line x1="100.0" y1="30.0" x2="960.0" y2="30.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="34.0" class="tick" text-anchor="end">0,60M</text>
+      <line x1="100.0" y1="100.0" x2="960.0" y2="100.0" stroke="#94a3b8" stroke-width="1.6"/>
+      <text x="88.0" y="104.0" class="tick" text-anchor="end">0</text>
+      <line x1="100.0" y1="170.0" x2="960.0" y2="170.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="174.0" class="tick" text-anchor="end">-0,60M</text>
+      <line x1="100.0" y1="240.0" x2="960.0" y2="240.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="244.0" class="tick" text-anchor="end">-1,20M</text>
+      <line x1="100.0" y1="310.0" x2="960.0" y2="310.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="314.0" class="tick" text-anchor="end">-1,80M</text>
+      <line x1="100.0" y1="380.0" x2="960.0" y2="380.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="384.0" class="tick" text-anchor="end">-2,40M</text>
+      <line x1="100.0" y1="450.0" x2="960.0" y2="450.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="454.0" class="tick" text-anchor="end">-3,00M</text>
+      <path d="M 100.00 46.39 C 113.03 60.58, 152.12 119.52, 178.18 131.51 C 204.24 143.50, 230.30 97.20, 256.36 118.33 C 282.42 139.46, 308.48 246.24, 334.55 258.30 C 360.61 270.36, 386.67 194.20, 412.73 190.68 C 438.79 187.15, 464.85 236.33, 490.91 237.13 C 516.97 237.94, 543.03 200.46, 569.09 195.50 C 595.15 190.54, 621.21 196.15, 647.27 207.36 C 673.33 218.57, 699.39 241.49, 725.45 262.75 C 751.52 284.01, 777.58 307.38, 803.64 334.90 C 829.70 362.43, 855.76 419.59, 881.82 427.92 C 907.88 436.25, 946.97 392.04, 960.00 384.86 L 960.00 100.00 L 100.00 100.00 Z" fill="url(#green)" clip-path="url(#above)"/>
+      <path d="M 100.00 46.39 C 113.03 60.58, 152.12 119.52, 178.18 131.51 C 204.24 143.50, 230.30 97.20, 256.36 118.33 C 282.42 139.46, 308.48 246.24, 334.55 258.30 C 360.61 270.36, 386.67 194.20, 412.73 190.68 C 438.79 187.15, 464.85 236.33, 490.91 237.13 C 516.97 237.94, 543.03 200.46, 569.09 195.50 C 595.15 190.54, 621.21 196.15, 647.27 207.36 C 673.33 218.57, 699.39 241.49, 725.45 262.75 C 751.52 284.01, 777.58 307.38, 803.64 334.90 C 829.70 362.43, 855.76 419.59, 881.82 427.92 C 907.88 436.25, 946.97 392.04, 960.00 384.86 L 960.00 100.00 L 100.00 100.00 Z" fill="url(#red)" clip-path="url(#below)"/>
+      <path d="M 100.00 46.39 C 113.03 60.58, 152.12 119.52, 178.18 131.51 C 204.24 143.50, 230.30 97.20, 256.36 118.33 C 282.42 139.46, 308.48 246.24, 334.55 258.30 C 360.61 270.36, 386.67 194.20, 412.73 190.68 C 438.79 187.15, 464.85 236.33, 490.91 237.13 C 516.97 237.94, 543.03 200.46, 569.09 195.50 C 595.15 190.54, 621.21 196.15, 647.27 207.36 C 673.33 218.57, 699.39 241.49, 725.45 262.75 C 751.52 284.01, 777.58 307.38, 803.64 334.90 C 829.70 362.43, 855.76 419.59, 881.82 427.92 C 907.88 436.25, 946.97 392.04, 960.00 384.86" fill="none" stroke="#dc2626" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="109.0" y="32.4" class="vlab" text-anchor="start" fill="#15803d">0,46M</text>
+      <text x="178.2" y="151.5" class="vlab" text-anchor="middle" fill="#b91c1c">-0,27M</text>
+      <text x="256.4" y="138.3" class="vlab" text-anchor="middle" fill="#b91c1c">-0,16M</text>
+      <text x="334.5" y="278.3" class="vlab" text-anchor="middle" fill="#b91c1c">-1,36M</text>
+      <text x="412.7" y="210.7" class="vlab" text-anchor="middle" fill="#b91c1c">-0,78M</text>
+      <text x="490.9" y="257.1" class="vlab" text-anchor="middle" fill="#b91c1c">-1,18M</text>
+      <text x="569.1" y="215.5" class="vlab" text-anchor="middle" fill="#b91c1c">-0,82M</text>
+      <text x="647.3" y="227.4" class="vlab" text-anchor="middle" fill="#b91c1c">-0,92M</text>
+      <text x="725.5" y="282.8" class="vlab" text-anchor="middle" fill="#b91c1c">-1,40M</text>
+      <text x="803.6" y="354.9" class="vlab" text-anchor="middle" fill="#b91c1c">-2,01M</text>
+      <text x="881.8" y="447.9" class="vlab" text-anchor="middle" fill="#b91c1c">-2,81M</text>
+      <text x="960.0" y="404.9" class="vlab" text-anchor="middle" fill="#b91c1c">-2,44M</text>
+      <circle cx="100.0" cy="46.4" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Oct-25 — saldo 459.510,06</title></circle>
+      <circle cx="178.2" cy="131.5" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Nov-25 — saldo -270.110,44</title></circle>
+      <circle cx="256.4" cy="118.3" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Dic-25 — saldo -157.091,14</title></circle>
+      <circle cx="334.5" cy="258.3" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Ene-26 — saldo -1.356.842,26</title></circle>
+      <circle cx="412.7" cy="190.7" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Feb-26 — saldo -777.216,53</title></circle>
+      <circle cx="490.9" cy="237.1" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Mar-26 — saldo -1.175.412,73</title></circle>
+      <circle cx="569.1" cy="195.5" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Abr-26 — saldo -818.567,86</title></circle>
+      <circle cx="647.3" cy="207.4" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>May-26 — saldo -920.249,25</title></circle>
+      <circle cx="725.5" cy="262.8" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Jun-26 — saldo -1.395.017,49</title></circle>
+      <circle cx="803.6" cy="334.9" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Jul-26 — saldo -2.013.470,14</title></circle>
+      <circle cx="881.8" cy="427.9" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Ago-26 — saldo -2.810.749,29</title></circle>
+      <circle cx="960.0" cy="384.9" r="5" fill="#fff" stroke="#dc2626" stroke-width="2.5"><title>Sep-26 — saldo -2.441.666,11</title></circle>
+      <text x="100.0" y="476.0" class="xlab" text-anchor="middle">Oct-25</text>
+      <text x="178.2" y="476.0" class="xlab" text-anchor="middle">Nov-25</text>
+      <text x="256.4" y="476.0" class="xlab" text-anchor="middle">Dic-25</text>
+      <text x="334.5" y="476.0" class="xlab" text-anchor="middle">Ene-26</text>
+      <text x="412.7" y="476.0" class="xlab" text-anchor="middle">Feb-26</text>
+      <text x="490.9" y="476.0" class="xlab" text-anchor="middle">Mar-26</text>
+      <text x="569.1" y="476.0" class="xlab" text-anchor="middle">Abr-26</text>
+      <text x="647.3" y="476.0" class="xlab" text-anchor="middle">May-26</text>
+      <text x="725.5" y="476.0" class="xlab" text-anchor="middle">Jun-26</text>
+      <text x="803.6" y="476.0" class="xlab" text-anchor="middle">Jul-26</text>
+      <text x="881.8" y="476.0" class="xlab" text-anchor="middle">Ago-26</text>
+      <text x="960.0" y="476.0" class="xlab" text-anchor="middle">Sep-26</text>
+    </svg>
+    <div class="legend">
+      <span><span class="dot" style="background:#dc2626"></span>Saldo consolidado</span>
+      <span><span class="dot" style="background:#4ade80"></span>Saldo a favor</span>
+      <span><span class="dot" style="background:#f87171"></span>Deuda</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Variaci&oacute;n mensual (mejora / deterioro)</h2>
+    <p class="hint">Cada barra es el movimiento neto del mes: gastos menos ingresos. Rojo = la deuda creci&oacute;.</p>
+    <svg viewBox="0 0 1000 300" role="img" aria-label="Variacion mensual de la deuda">
+      <line x1="100.0" y1="23.0" x2="960.0" y2="23.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="27.0" class="tick" text-anchor="end">0,60M</text>
+      <line x1="100.0" y1="59.0" x2="960.0" y2="59.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="63.0" class="tick" text-anchor="end">0,30M</text>
+      <line x1="100.0" y1="95.0" x2="960.0" y2="95.0" stroke="#94a3b8" stroke-width="1.6"/>
+      <text x="88.0" y="99.0" class="tick" text-anchor="end">0</text>
+      <line x1="100.0" y1="131.0" x2="960.0" y2="131.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="135.0" class="tick" text-anchor="end">-0,30M</text>
+      <line x1="100.0" y1="167.0" x2="960.0" y2="167.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="171.0" class="tick" text-anchor="end">-0,60M</text>
+      <line x1="100.0" y1="203.0" x2="960.0" y2="203.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="207.0" class="tick" text-anchor="end">-0,90M</text>
+      <line x1="100.0" y1="239.0" x2="960.0" y2="239.0" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="88.0" y="243.0" class="tick" text-anchor="end">-1,20M</text>
+      <text x="207.5" y="269.0" class="xlab" text-anchor="middle">Nov-25</text>
+      <text x="279.2" y="269.0" class="xlab" text-anchor="middle">Dic-25</text>
+      <text x="350.8" y="269.0" class="xlab" text-anchor="middle">Ene-26</text>
+      <text x="422.5" y="269.0" class="xlab" text-anchor="middle">Feb-26</text>
+      <text x="494.2" y="269.0" class="xlab" text-anchor="middle">Mar-26</text>
+      <text x="565.8" y="269.0" class="xlab" text-anchor="middle">Abr-26</text>
+      <text x="637.5" y="269.0" class="xlab" text-anchor="middle">May-26</text>
+      <text x="709.2" y="269.0" class="xlab" text-anchor="middle">Jun-26</text>
+      <text x="780.8" y="269.0" class="xlab" text-anchor="middle">Jul-26</text>
+      <text x="852.5" y="269.0" class="xlab" text-anchor="middle">Ago-26</text>
+      <text x="924.2" y="269.0" class="xlab" text-anchor="middle">Sep-26</text>
+      <rect x="186.7" y="95.0" width="41.6" height="87.6" fill="#dc2626" rx="3"><title>Nov-25: -729.620,50</title></rect>
+      <rect x="258.4" y="81.4" width="41.6" height="13.6" fill="#16a34a" rx="3"><title>Dic-25: 113.019,30</title></rect>
+      <rect x="330.0" y="95.0" width="41.6" height="144.0" fill="#dc2626" rx="3"><title>Ene-26: -1.199.751,12</title></rect>
+      <rect x="401.7" y="25.4" width="41.6" height="69.6" fill="#16a34a" rx="3"><title>Feb-26: 579.625,73</title></rect>
+      <rect x="473.4" y="95.0" width="41.6" height="47.8" fill="#dc2626" rx="3"><title>Mar-26: -398.196,20</title></rect>
+      <rect x="545.1" y="52.2" width="41.6" height="42.8" fill="#16a34a" rx="3"><title>Abr-26: 356.844,87</title></rect>
+      <rect x="616.7" y="95.0" width="41.6" height="12.2" fill="#dc2626" rx="3"><title>May-26: -101.681,39</title></rect>
+      <rect x="688.4" y="95.0" width="41.6" height="57.0" fill="#dc2626" rx="3"><title>Jun-26: -474.768,24</title></rect>
+      <rect x="760.1" y="95.0" width="41.6" height="74.2" fill="#dc2626" rx="3"><title>Jul-26: -618.452,65</title></rect>
+      <rect x="831.7" y="95.0" width="41.6" height="95.7" fill="#dc2626" rx="3"><title>Ago-26: -797.279,15</title></rect>
+      <rect x="903.4" y="50.7" width="41.6" height="44.3" fill="#16a34a" rx="3"><title>Sep-26: 369.083,18</title></rect>
+      <text x="207.5" y="198.6" class="vlab2" text-anchor="middle" fill="#b91c1c">-0,73M</text>
+      <text x="279.2" y="73.4" class="vlab2" text-anchor="middle" fill="#15803d">0,11M</text>
+      <text x="350.8" y="111.0" class="vlab2" text-anchor="middle" fill="#ffffff">-1,20M</text>
+      <text x="422.5" y="17.4" class="vlab2" text-anchor="middle" fill="#15803d">0,58M</text>
+      <text x="494.2" y="158.8" class="vlab2" text-anchor="middle" fill="#b91c1c">-0,40M</text>
+      <text x="565.8" y="44.2" class="vlab2" text-anchor="middle" fill="#15803d">0,36M</text>
+      <text x="637.5" y="123.2" class="vlab2" text-anchor="middle" fill="#b91c1c">-0,10M</text>
+      <text x="709.2" y="168.0" class="vlab2" text-anchor="middle" fill="#b91c1c">-0,47M</text>
+      <text x="780.8" y="185.2" class="vlab2" text-anchor="middle" fill="#b91c1c">-0,62M</text>
+      <text x="852.5" y="206.7" class="vlab2" text-anchor="middle" fill="#b91c1c">-0,80M</text>
+      <text x="924.2" y="42.7" class="vlab2" text-anchor="middle" fill="#15803d">0,37M</text>
+    </svg>
+    <div class="legend">
+      <span><span class="dot" style="background:#16a34a"></span>Mejora del saldo</span>
+      <span><span class="dot" style="background:#dc2626"></span>Deterioro del saldo</span>
+    </div>
+  </div>
+
+  <footer>
+    Fuente: liquidaciones de expensas comunes oct-2025 a sep-2026 (PDF de esta carpeta).<br>
+    Datos tomados del bloque &ldquo;Saldo Expensas&rdquo; de cada liquidaci&oacute;n. Nota: en junio-2026 el resumen
+    declara gastos comunes de $ 882.280,47 mientras el detalle suma $ 822.281,65; el saldo impreso
+    de ese mes refleja la cifra del resumen. Los aportes a &ldquo;Automatizaci&oacute;n port&oacute;n&rdquo;
+    (U$S/aporte de $ 350.000) no forman parte de este saldo.
+  </footer>
+</div>
+</body>
+</html>
